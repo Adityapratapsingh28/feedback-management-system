@@ -26,6 +26,10 @@ app.use((req, res, next) => {
 const feedbackRoutes = require('./routes/feedbackRoutes');
 app.use('/api/feedback', feedbackRoutes);
 
+const adminRoutes = require('./routes/adminRoutes');
+app.use('/api/admin', adminRoutes);
+
+
 app.get('/', (req, res) => {
   res.send('Feedback API Running 🚀');
 });

@@ -98,3 +98,54 @@ Think of it like a receptionist who sends you to the correct department (control
 You can simulate sending feedback without a form
 
 Helpful for checking if routes and database are working
+
+🔐 Step-by-Step Plan for Admin Login + JWT
+We'll now do the following:
+
+- Create the Admin Model
+MongoDB schema with email and hashed password.
+
+- Create Admin Login Route
+Admin sends email and password
+We check if they exist and match
+If valid, generate a JWT token and send it back
+
+- Create Auth Middleware
+Middleware to verify JWT token for protected routes
+
+- Protect Feedback Routes (GET, DELETE)
+
+
+Client (Postman or React) 
+     ⬇️ Login
+POST /api/admin/login
+     ⬇️ 
+Receives JWT token ✅
+
+--- For Every Admin Action ---
+
+Client sends:
+GET /api/admin/feedback
+Headers: Authorization: Bearer eyJhbGci...
+
+     ⬇️
+Middleware (authMiddleware.js):
+- Reads token
+- Verifies it
+- Allows or blocks
+
+     ⬇️
+If valid → Call controller function
+     ⬇️
+Return data to admin
+
+
+🛠 Step 3: Define Pages and Components
+| Page               | File                         | Purpose                                |
+| ------------------ | ---------------------------- | -------------------------------------- |
+| 📝 Submit Feedback | `components/FeedbackForm.js` | User fills form                        |
+| 🔐 Admin Login     | `pages/AdminLogin.js`        | Admin enters email/password            |
+| 📄 Feedback List   | `pages/FeedbackList.js`      | Admin sees all feedback                |
+| 📄 Feedback Detail | `pages/FeedbackDetail.js`    | Admin sees one feedback                |
+| 🔁 Routing         | `App.js`                     | Handle routes using `react-router-dom` |
+
