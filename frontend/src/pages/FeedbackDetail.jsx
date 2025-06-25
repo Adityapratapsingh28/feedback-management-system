@@ -18,7 +18,7 @@ const FeedbackDetail = () => {
 
     const fetchFeedback = async () => {
       try {
-        const res = await axios.get(`http://localhost:5001/api/admin/feedback/${id}`, {
+        const res = await axios.get(`https://feedback-backend-6gh5.onrender.com/api/admin/feedback/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
