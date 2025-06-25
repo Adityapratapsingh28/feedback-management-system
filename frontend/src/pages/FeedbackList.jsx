@@ -18,7 +18,7 @@ const FeedbackList = () => {
 
     const fetchFeedbacks = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/api/admin/feedback", {
+        const res = await axios.get("https://feedback-backend-6gh5.onrender.com/api/admin/feedback",{
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -34,7 +34,7 @@ const FeedbackList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/admin/feedback/${id}`, {
+      await axios.delete(`https://feedback-backend-6gh5.onrender.com/api/admin/feedback/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
