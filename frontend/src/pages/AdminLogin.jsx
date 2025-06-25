@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5001/api/admin/login", formData);
+      const res = await axios.post("https://feedback-backend-6gh5.onrender.com/api/admin/login", formData);
       const { token } = res.data;
 
       // Save token to localStorage
