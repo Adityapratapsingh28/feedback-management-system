@@ -19,7 +19,7 @@ const FeedbackForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/api/feedback", formData);
+      await axios.post("https://feedback-backend-6gh5.onrender.com/api/feedback", formData);
       setSubmitted(true);
       setError("");
     } catch (err) {
