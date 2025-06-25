@@ -19,11 +19,11 @@ const FeedbackForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/feedback", formData);
+      await axios.post("http://localhost:5001/api/feedback", formData);
       setSubmitted(true);
       setError("");
     } catch (err) {
-      setError("Something went wrong.");
+      setError("❌ Something went wrong.");
     }
   };
 
@@ -41,6 +41,7 @@ const FeedbackForm = () => {
             onChange={handleChange}
             required
           /><br /><br />
+
           <input
             name="email"
             placeholder="Your Email"
@@ -48,6 +49,7 @@ const FeedbackForm = () => {
             onChange={handleChange}
             required
           /><br /><br />
+
           <textarea
             name="message"
             placeholder="Your Message"
@@ -55,17 +57,15 @@ const FeedbackForm = () => {
             onChange={handleChange}
             required
           /><br /><br />
-          <select
-            name="rating"
-            value={formData.rating}
-            onChange={handleChange}
-          >
+
+          <select name="rating" value={formData.rating} onChange={handleChange}>
             <option value={1}>⭐</option>
             <option value={2}>⭐⭐</option>
             <option value={3}>⭐⭐⭐</option>
             <option value={4}>⭐⭐⭐⭐</option>
             <option value={5}>⭐⭐⭐⭐⭐</option>
           </select><br /><br />
+
           <button type="submit">Submit</button>
         </form>
       )}

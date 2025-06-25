@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FeedbackForm from './components/FeedbackForm';
-import AdminLogin from './pages/AdminLogin';
-import FeedbackList from './pages/FeedbackList';
-import FeedbackDetail from './pages/FeedbackDetail';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FeedbackForm from "./components/FeedbackForm";
+import AdminLogin from "./pages/AdminLogin";
+import FeedbackList from "./pages/FeedbackList";
+import FeedbackDetail from "./pages/FeedbackDetail";
 
 function App() {
   return (

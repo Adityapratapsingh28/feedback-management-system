@@ -149,3 +149,81 @@ Return data to admin
 | 📄 Feedback Detail | `pages/FeedbackDetail.js`    | Admin sees one feedback                |
 | 🔁 Routing         | `App.js`                     | Handle routes using `react-router-dom` |
 
+✅ Step 1: cd ~/Documents/feedback-system
+Why?
+You're working on a full project (backend + frontend), so we navigate to your main folder before adding the frontend.
+
+📂 Think of it like walking into the “house” (project) before adding a new room (frontend).
+
+✅ Step 2: npm create vite@latest frontend
+Why Vite?
+
+It sets up a modern React app much faster than older tools like create-react-app.
+
+It supports hot-reloading and smaller build sizes.
+
+📦 Vite is like a smart builder who sets up your React workspace in 10 seconds instead of 10 minutes.
+
+✅ Step 3: npm install and install dependencies
+bash
+Copy
+Edit
+npm install
+npm install axios react-router-dom
+Why?
+
+npm install downloads all the packages your React app depends on.
+
+axios lets you send API requests to your backend.
+
+react-router-dom lets you create multiple "pages" in your app.
+
+📡 Axios is the phone that your frontend uses to talk to the backend.
+🧭 React Router is the GPS that moves between different screens like /, /admin, etc.
+
+✅ Step 4: npm run dev
+Why?
+This starts the Vite development server. It watches your code and shows changes live.
+
+🌐 It’s like starting a local mini-internet where you test your site before going public.
+
+✅ Step 5: Creating File Structure
+plaintext
+Copy
+Edit
+src/
+├── components/
+├── pages/
+├── App.jsx
+├── main.jsx
+
+✅ Step 6: Setting up Routing in App.jsx
+
+<Route path="/" element={<FeedbackForm />} />
+<Route path="/admin" element={<AdminLogin />} />
+Why?
+This allows your React app to behave like a multi-page app — even though it’s technically one single-page app.
+
+🧭 React Router makes your app feel like it's navigating between pages, just like a real website.
+
+✅ Step 7: Cleaning up Vite boilerplate
+Why?
+Vite gives a sample “Hello Vite + React” page — we replace it with our actual app setup.
+
+🧼 You’re clearing out the demo stuff to start fresh — just like erasing the whiteboard before starting your own wor
+
+- Feedback form
+
+🎯 Objective
+We’ll build a form with:
+
+Name
+Email
+Message
+Rating (1–5 stars)
+Once the user clicks Submit, the form will:
+Send data to the backend (POST /api/feedback)
+Show a success message if it's saved
+Show an error message if something goes wrong
+
+
