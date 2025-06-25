@@ -240,10 +240,21 @@ Use this to:
 
 ---
 
+## Screenshots
+
+<img width="1303" alt="Screenshot 2025-06-25 at 3 40 47 PM" src="https://github.com/user-attachments/assets/af74aaf2-ff82-43ae-ae3d-450a3856b5cf" />
+
+<img width="1315" alt="Screenshot 2025-06-25 at 3 42 09 PM" src="https://github.com/user-attachments/assets/6a4c3ee9-9703-42f8-9aac-5b893da783ba" />
+
+<img width="1048" alt="Screenshot 2025-06-25 at 3 39 49 PM" src="https://github.com/user-attachments/assets/840a0365-e71c-4935-b7ea-bb87a796632f" />
+
+<img width="1275" alt="Screenshot 2025-06-25 at 3 43 29 PM" src="https://github.com/user-attachments/assets/85a29479-d6f9-4ab0-9042-ca4f0ca2beb6" />
+
+
 
 ## 📣 Contributing
 
-If you're submitting this for an internship or assignment, feel free to extend features like pagination, admin registration, feedback filtering, or user dashboards.
+feel free to extend features like pagination, admin registration, feedback filtering, or user dashboards.
 
 ---
 
